@@ -1,0 +1,392 @@
+/* CSS Document */
+
+.frame {
+  background: url(../images/frame.png) no-repeat;
+  width: 930px; /*800px;*/
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 100% 100%;
+}
+
+.calculator {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 15px;
+  clear: both;
+}
+
+.headline {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-left: -40px;
+  padding-top: 10px;
+}
+
+.pool {
+  font-size: 24px;
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  padding-top: 4px;
+  float: left;
+  clear: none;
+  padding-top: 50px;
+}
+
+.inputs {
+  padding-top: 40px;
+}
+
+.headertext {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 14;
+}
+
+.subheadertext {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 10;
+  text-align: center;
+}
+
+.inputDistance {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 30px;
+}
+
+.total {
+  background-color: #e6e6e6;
+  width: 270px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  /*margin-top: 30px;*/
+  margin-bottom: 3px;
+}
+
+.totaldistance {
+  background-color: #e6e6e6;
+  width: 180px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.spinners {
+  float: left;
+  clear: none;
+}
+
+.plus {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.minus {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.inputTxtDistance {
+  background-color: #e6e6e6;
+  width: 157px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.inputFieldDistance {
+  border: 1px solid black;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 37px;
+  font-size: 20px;
+  width: 80px;
+  text-align: center;
+}
+
+.smallText {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 12px;
+}
+
+.inputTotal {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.inputT1 {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-left: 30px;
+}
+
+.inputT2 {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-left: 30px;
+}
+
+.inputTimes {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+}
+
+.inputLaps {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-left: 30px;
+}
+
+.inputSpeed {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 5px;
+  padding-left: 30px;
+}
+
+.times {
+  background-color: #e6e6e6;
+  width: 85px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.laps {
+  background-color: #e6e6e6;
+  width: 180px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.speed {
+  background-color: #e6e6e6;
+  width: 100px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.inputTxtTimes {
+  background-color: #e6e6e6;
+  width: 62px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.inputTxtTotal {
+  background-color: #e6e6e6;
+  width: 98px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: left;
+  margin-top: 3px;
+}
+
+.inputTxtTotalms {
+  background-color: #e6e6e6;
+  width: 86px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: left;
+  margin-top: 3px;
+}
+
+.inputTxtLapsMinutes {
+  background-color: #e6e6e6;
+  width: 60px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.inputTxtLapsSeconds {
+  background-color: #e6e6e6;
+  width: 120px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+  /*margin-left: -5px;*/
+}
+
+.inputTxtSpeed {
+  background-color: #e6e6e6;
+  width: 100px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: left;
+  margin-top: 3px;
+}
+
+.inputFieldTimes {
+  border: 1px solid black;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 37px;
+  font-size: 20px;
+  width: 45px;
+  text-align: center;
+}
+
+.inputFieldSpeed {
+  border: 1px solid black;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 37px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+}
+
+.divCalc {
+  padding-bottom: 40px;
+  float: left;
+  clear: none;
+  padding-right: 30px;
+}
+
+.imgCalc {
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+.divReset {
+  padding-bottom: 30px;
+}
+
+.imgReset {
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+input.first,
+textarea.first,
+select.first {
+  border: 1px solid Black;
+  background-color: #cccccc;
+  color: #0e1930;
+  font-size: 12px;
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-weight: bold;
+  height: 40px; /* replace 2em with your chosen value, in px or whatever */
+}
+
+.buttons {
+  display: table-cell;
+  width: 300px;
+}
+
+input[type="text"]:disabled {
+  background-color: white;
+}
+
+/* Nav menu */
+#primary_nav_wrap {
+  /*margin-top:15px;*/
+}
+
+#primary_nav_wrap ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#primary_nav_wrap ul a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 15px;
+  /*border: 1px solid #000;*/
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+}
+
+#primary_nav_wrap ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#primary_nav_wrap ul li.current-menu-item {
+  background: #ddd;
+}
+
+#primary_nav_wrap ul li:hover {
+  background: #cccccc;
+}
+
+#primary_nav_wrap ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0;
+}
+
+#primary_nav_wrap ul ul li {
+  float: none;
+  width: 175px;
+}
+
+#primary_nav_wrap ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+}
+
+#primary_nav_wrap ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+#primary_nav_wrap ul li:hover > ul {
+  display: block;
+}

@@ -1,0 +1,355 @@
+/* CSS Document */
+
+.frame {
+  background: url(../images/frame.png) no-repeat;
+  width: 800px;
+  min-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: 100% 100%;
+}
+
+.calculator {
+  padding-left: 40px;
+  padding-top: 20px;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 15px;
+  clear: both;
+}
+
+.headline {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-left: -40px;
+}
+
+.pool {
+  font-size: 24px;
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  padding-top: 4px;
+  float: left;
+  clear: none;
+  padding-top: 50px;
+}
+
+.inputs {
+  padding-top: 20px;
+}
+
+.headertext {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 14;
+}
+
+.inputDistance {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 30px;
+}
+
+.totaldistance {
+  background-color: #e6e6e6;
+  width: 120px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.spinners {
+  float: left;
+  clear: none;
+}
+
+.plus {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 3px;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+.minus {
+  cursor: pointer;
+  background-color: #e6e6e6;
+  width: 20px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.inputTxtDistance {
+  background-color: #e6e6e6;
+  width: 97px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.inputFieldDistance {
+  border: 1px solid black;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 37px;
+  font-size: 20px;
+  width: 80px;
+  text-align: center;
+}
+
+.smallText {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-size: 12px;
+}
+
+.inputRest {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 30px;
+}
+
+.inputIntensity {
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+.times {
+  background-color: #e6e6e6;
+  width: 85px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.inputTxtTimes {
+  background-color: #e6e6e6;
+  width: 62px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.inputFieldTimes {
+  border: 1px solid black;
+  margin-top: 3px;
+  margin-left: 3px;
+  height: 37px;
+  font-size: 20px;
+  width: 45px;
+  text-align: center;
+}
+
+.inputTxtWork {
+  background-color: #e6e6e6;
+  width: 120px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.working {
+  background-color: #e6e6e6;
+  width: 120px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+.inputTxtIntensity {
+  background-color: #e6e6e6;
+  width: 72px;
+  height: 43px;
+  vertical-align: middle;
+  display: table-cell;
+  float: right;
+  margin-top: 3px;
+}
+
+.intensity {
+  background-color: #e6e6e6;
+  width: 95px;
+  height: 20px;
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+}
+
+input[type="text"]:disabled {
+  background-color: white;
+}
+
+.divCalc {
+  padding-bottom: 30px;
+  float: left;
+  clear: none;
+  padding-right: 30px;
+}
+
+.imgCalc {
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+.divReset {
+  padding-bottom: 30px;
+}
+
+.imgReset {
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+input.first,
+textarea.first,
+select.first {
+  border: 1px solid Black;
+  background-color: #cccccc;
+  color: #0e1930;
+  font-size: 12px;
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  font-weight: bold;
+  height: 40px; /* replace 2em with your chosen value, in px or whatever */
+}
+
+.resText {
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+  /*font-size: 16px;*/
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 700px;
+  text-align: center;
+}
+
+.resultTable {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+}
+
+.resultTable td,
+th {
+  text-align: center;
+  border: 1px solid black;
+  /*width: 33%;*/
+}
+
+.resultTable tr:nth-child(1) {
+  background-color: #eeeeee;
+  width: 25%;
+}
+.resultTable tr:nth-child(2) {
+  background-color: #f93333;
+  width: 25%;
+}
+.resultTable tr:nth-child(3) {
+  background-color: #ff6c00;
+  width: 50%;
+}
+.resultTable tr:nth-child(4) {
+  background-color: #ffa500;
+}
+.resultTable tr:nth-child(5) {
+  background-color: #ffd700;
+}
+.resultTable tr:nth-child(6) {
+  background-color: #ffff90;
+}
+
+.buttons {
+  display: table-cell;
+  width: 300px;
+}
+
+/* Nav menu */
+#primary_nav_wrap {
+  /*margin-top:15px;*/
+}
+
+#primary_nav_wrap ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#primary_nav_wrap ul a {
+  display: block;
+  color: #000;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 32px;
+  padding: 0 15px;
+  /*border: 1px solid #000;*/
+  font-family: "Myriad Pro", Myriad, Verdana, Geneva, Arial, Helvetica,
+    sans-serif;
+}
+
+#primary_nav_wrap ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+#primary_nav_wrap ul li.current-menu-item {
+  background: #ddd;
+}
+
+#primary_nav_wrap ul li:hover {
+  background: #cccccc;
+}
+
+#primary_nav_wrap ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0;
+}
+
+#primary_nav_wrap ul ul li {
+  float: none;
+  width: 175px;
+}
+
+#primary_nav_wrap ul ul a {
+  line-height: 120%;
+  padding: 10px 15px;
+}
+
+#primary_nav_wrap ul ul ul {
+  top: 0;
+  left: 100%;
+}
+
+#primary_nav_wrap ul li:hover > ul {
+  display: block;
+}

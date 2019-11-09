@@ -1,0 +1,1076 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>BEREGN DINE MELLEMTIDER OG HASTIGHEDER I TRIATHLON</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/sweetalert.css" />
+    <script language="JavaScript" src="js/triathlon.js"></script>
+    <script language="JavaScript" src="js/sweetalert.min.js"></script>
+  </head>
+  <body onLoad="init();">
+    <nav id="primary_nav_wrap">
+      <ul>
+        <li>
+          <a href="#">Svømning</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/svomme-tempo-beregner/" target="_top"
+                >Tempo</a
+              >
+            </li>
+            <li>
+              <a href="http://tri-club.dk/svomme-split-beregner/" target="_top"
+                >Split</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://tri-club.dk/svomme-forventningstid-beregner/"
+                target="_top"
+                >Forventing</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Cykling</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/cykel-split-beregner/" target="_top"
+                >Split</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://tri-club.dk/cykel-forventningstid-beregner/"
+                target="_top"
+                >Forventning</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Løb</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/lobe-split-beregner/" target="_top"
+                >Split</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://tri-club.dk/lobe-forventningstid-beregner/"
+                target="_top"
+                >Forventning</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://tri-club.dk/triathlon-beregner/" target="_top"
+            >Triathlon</a
+          >
+        </li>
+        <li>
+          <a href="#">Puls</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/maxpuls-beregner/" target="_top"
+                >Max puls</a
+              >
+            </li>
+            <li>
+              <a href="http://tri-club.dk/traeningszone-beregner/" target="_top"
+                >Træningszoner</a
+              >
+            </li>
+            <li>
+              <a href="http://tri-club.dk/tdk-pulszone-beregner/" target="_top"
+                >TCDK Træningszoner</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="logo"><img src="images/logo.png" width="400px;" /></div>
+    <div class="frame">
+      <div class="calculator">
+        <div class="headline">
+          MELLEMTIDER OG HASTIGHEDER I TRIATHLON
+        </div>
+        <div>
+          <p class="subheadertext">
+            Husk kun angive distance og enten tid, mellemtid eller hastighed ved
+            de 3 discipliner !!!
+          </p>
+          <p class="subheadertext">
+            Hvis du vil ændre input efter du har trykket på Beregn skal du huske
+            at nustille de andre<br />inputfelter ved den disciplin du vil ændre
+            ellers er det kun totaltid der ændres !!!
+          </p>
+        </div>
+        <div>
+          <img
+            style="padding-top:30px; cursor: pointer;"
+            src="images/1_10.png"
+            width="156"
+            height="40"
+            name="Image1_10"
+            id="Image1_10"
+            onmouseover="onHover(Image1_10);"
+            onmouseout="offHover(Image1_10);"
+            onClick="ChangeImage(Image1_10);"
+          />&nbsp;&nbsp;
+          <img
+            style="cursor: pointer;"
+            src="images/sprint.png"
+            width="93"
+            height="40"
+            name="ImageSprint"
+            id="ImageSprint"
+            onmouseover="onHover(ImageSprint);"
+            onmouseout="offHover(ImageSprint);"
+            onClick="ChangeImage(ImageSprint);"
+          />&nbsp;&nbsp;
+          <img
+            style="cursor: pointer;"
+            src="images/olympisk.png"
+            width="120"
+            height="40"
+            name="ImageOL"
+            id="ImageOL"
+            onmouseover="onHover(ImageOL);"
+            onmouseout="offHover(ImageOL);"
+            onClick="ChangeImage(ImageOL);"
+          />&nbsp;&nbsp;
+          <img
+            style="cursor: pointer;"
+            src="images/1_4.png"
+            width="150"
+            height="40"
+            name="Image1_4"
+            id="Image1_4"
+            onmouseover="onHover(Image1_4);"
+            onmouseout="offHover(Image1_4);"
+            onClick="ChangeImage(Image1_4);"
+          />&nbsp;&nbsp;
+          <img
+            style="cursor: pointer;"
+            src="images/1_2.png"
+            width="150"
+            height="40"
+            name="Image1_2"
+            id="Image1_2"
+            onmouseover="onHover(Image1_2);"
+            onmouseout="offHover(Image1_2);"
+            onClick="ChangeImage(Image1_2);"
+          />&nbsp;&nbsp;
+          <img
+            style="cursor: pointer;"
+            src="images/ironman.png"
+            width="117"
+            height="40"
+            name="ImageIM"
+            id="ImageIM"
+            onmouseover="onHover(ImageIM);"
+            onmouseout="offHover(ImageIM);"
+            onClick="ChangeImage(ImageIM);"
+          />
+        </div>
+
+        <div class="inputs">
+          <div class="inputDistance">
+            <div class="totaldistance">
+              <span class="headertext">Sv&oslashmning (distance)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMeterSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMeterSvim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtDistance">
+                <input
+                  type="text"
+                  name="MeterSvimTxt"
+                  id="MeterSvimTxt"
+                  onkeypress="return isNumberKeySwim(event)"
+                  class="inputFieldDistance"
+                />
+                <span class="smallText">meter</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Time(r)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addHourSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subHourSwim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="HourSvimTxt"
+                  id="HourSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <b>:</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Minut(ter)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMinutSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMinutSvim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="MinutSvimTxt"
+                  id="MinutSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Sekund(er)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addSecondSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subSecondSvim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="SecondSvimTxt"
+                  id="SecondSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="inputLaps">
+            <div class="laps">
+              <span class="headertext">Mellemtid</span>
+            </div>
+            <div>
+              <div class="inputTxtLapsSeconds">
+                <input
+                  type="text"
+                  name="LapSecSvimTxt"
+                  id="LapSecSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span class="smallText">min/100m</span>
+              </div>
+              <div class="inputTxtLapsMinutes">
+                <input
+                  type="text"
+                  name="LapMinSvimTxt"
+                  id="LapMinSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputSpeed">
+            <div class="speed">
+              <span class="headertext">Hastighed</span>
+            </div>
+            <div>
+              <div class="inputTxtSpeed">
+                <input
+                  type="text"
+                  name="SpeedSvimTxt"
+                  id="SpeedSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldSpeed"
+                />
+                <span class="smallText">km/t</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <div class="inputDistance">
+            <div class="totaldistance">
+              <span class="headertext">Cykling (distance)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addKmBike();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subKmBike();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtDistance">
+                <input
+                  type="text"
+                  name="KmBikeTxt"
+                  id="KmBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldDistance"
+                />
+                <span class="smallText">kilometer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Time(r)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addHourBike();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subHourBike();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="HourBikeTxt"
+                  id="HourBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <b>:</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Minut(ter)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMinutBike();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMinutBike();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="MinutBikeTxt"
+                  id="MinutBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Sekund(er)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addSecondBike();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subSecondBike();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="SecondBikeTxt"
+                  id="SecondBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="inputLaps">
+            <div class="laps">
+              <span class="headertext">Mellemtid</span>
+            </div>
+            <div>
+              <div class="inputTxtLapsSeconds">
+                <input
+                  type="text"
+                  name="LapSecSvimTxt"
+                  name="LapSecBikeTxt"
+                  id="LapSecBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span class="smallText">min/km</span>
+              </div>
+              <div class="inputTxtLapsMinutes">
+                <input
+                  type="text"
+                  name="LapMinSvimTxt"
+                  name="LapMinBikeTxt"
+                  id="LapMinBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputSpeed">
+            <div class="speed">
+              <span class="headertext">Hastighed</span>
+            </div>
+            <div>
+              <div class="inputTxtSpeed">
+                <input
+                  type="text"
+                  name="SpeedBikeTxt"
+                  id="SpeedBikeTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldSpeed"
+                />
+                <span class="smallText">km/t</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <div class="inputDistance">
+            <div class="totaldistance">
+              <span class="headertext">L&oslashb (distance)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addKmRun();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subKmRun();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtDistance">
+                <input
+                  type="text"
+                  name="KmRunTxt"
+                  id="KmRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldDistance"
+                />
+                <span class="smallText">kilometer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Time(r)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addHourRun();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subHourRun();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="HourRunTxt"
+                  id="HourRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <b>:</b>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Minut(ter)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMinutRun();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMinutRun();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="MinutRunTxt"
+                  id="MinutRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Sekund(er)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addSecondRun();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subSecondRun();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="SecondRunTxt"
+                  id="SecondRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="inputLaps">
+            <div class="laps">
+              <span class="headertext">Mellemtid</span>
+            </div>
+            <div>
+              <div class="inputTxtLapsSeconds">
+                <input
+                  type="text"
+                  name="LapSecSvimTxt"
+                  id="LapSecRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span class="smallText">min/km</span>
+              </div>
+              <div class="inputTxtLapsMinutes">
+                <input
+                  type="text"
+                  name="LapMinSvimTxt"
+                  id="LapMinRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputSpeed">
+            <div class="speed">
+              <span class="headertext">Hastighed</span>
+            </div>
+            <div>
+              <div class="inputTxtSpeed">
+                <input
+                  type="text"
+                  name="SpeedRunTxt"
+                  id="SpeedRunTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldSpeed"
+                />
+                <span class="smallText">km/t</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inputs">
+          <div class="inputTotal">
+            &nbsp;
+            <div class="total">
+              <span class="headertext">Total tid</span>
+            </div>
+            <div>
+              <div class="inputTxtTotal">
+                <input
+                  type="text"
+                  name="TotalHourTxt"
+                  id="TotalHourTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                  disabled
+                />
+                <span class="smallText">time(r)</span>
+              </div>
+              <div class="inputTxtTotalms">
+                <input
+                  type="text"
+                  name="TotalMinutTxt"
+                  id="TotalMinutTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                  disabled
+                />
+                <span class="smallText">min</span>
+              </div>
+              <div class="inputTxtTotalms">
+                <input
+                  type="text"
+                  name="TotalSecondTxt"
+                  id="TotalSecondTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                  disabled
+                />
+                <span class="smallText">sek</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputT1">
+            <span class="headertext">T1</span>
+            <div class="times">
+              <span class="headertext">Minut(ter)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMinutT1();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMinutT1();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="MinutT1Txt"
+                  id="MinutT1Txt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            &nbsp;
+            <div class="times">
+              <span class="headertext">Sekund(er)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addSecondT1();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subSecondT1();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="SecondT1Txt"
+                  id="SecondT1Txt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="inputT2">
+            <span class="headertext">T2</span>
+            <div class="times">
+              <span class="headertext">Minut(ter)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMinutT2();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMinutT2();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="MinutT2Txt"
+                  id="MinutT2Txt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="inputTimes">
+            &nbsp;
+            <div class="times">
+              <span class="headertext">Sekund(er)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addSecondT2();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subSecondT2();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="SecondT2Txt"
+                  id="SecondT2Txt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <div class="divCalc">
+            <img
+              class="imgCalc"
+              src="images/calculate.png"
+              width="104"
+              height="40"
+              alt="beregn"
+              name="beregn"
+              id="beregn"
+              onmouseover="this.src='images/calculategreen.png'"
+              onmouseout="this.src='images/calculate.png'"
+              onClick="calculate();"
+            />
+          </div>
+          <div class="divReset">
+            <img
+              class="imgReset"
+              src="images/reset.png"
+              width="104"
+              height="40"
+              alt="nulstil"
+              name="nulstil"
+              id="nulstil"
+              onmouseover="this.src='images/resetgreen.png'"
+              onmouseout="this.src='images/reset.png'"
+              onClick="init();"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

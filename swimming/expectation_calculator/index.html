@@ -1,0 +1,301 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>BEREGN SVØMME FORVENTNINGSTIDER</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/sweetalert.css" />
+    <script language="JavaScript" src="js/swimming_expectations.js"></script>
+    <script language="JavaScript" src="js/sweetalert.min.js"></script>
+  </head>
+  <body onLoad="init();">
+    <nav id="primary_nav_wrap">
+      <ul>
+        <li>
+          <a href="#">Svømning</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/svomme-tempo-beregner/" target="_top"
+                >Tempo</a
+              >
+            </li>
+            <li>
+              <a href="http://tri-club.dk/svomme-split-beregner/" target="_top"
+                >Split</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://tri-club.dk/svomme-forventningstid-beregner/"
+                target="_top"
+                >Forventing</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Cykling</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/cykel-split-beregner/" target="_top"
+                >Split</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://tri-club.dk/cykel-forventningstid-beregner/"
+                target="_top"
+                >Forventning</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">Løb</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/lobe-split-beregner/" target="_top"
+                >Split</a
+              >
+            </li>
+            <li>
+              <a
+                href="http://tri-club.dk/lobe-forventningstid-beregner/"
+                target="_top"
+                >Forventning</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="http://tri-club.dk/triathlon-beregner/" target="_top"
+            >Triathlon</a
+          >
+        </li>
+        <li>
+          <a href="#">Puls</a>
+          <ul>
+            <li>
+              <a href="http://tri-club.dk/maxpuls-beregner/" target="_top"
+                >Max puls</a
+              >
+            </li>
+            <li>
+              <a href="http://tri-club.dk/traeningszone-beregner/" target="_top"
+                >Træningszoner</a
+              >
+            </li>
+            <li>
+              <a href="http://tri-club.dk/tdk-pulszone-beregner/" target="_top"
+                >TCDK Træningszoner</a
+              >
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="logo"><img src="images/logo.png" width="400px;" /></div>
+    <div class="frame">
+      <div class="calculator">
+        <div class="headline">SVØMME FORVENTNINGSTIDER</div>
+
+        <div class="inputs">
+          <div class="inputDistance">
+            <div class="totaldistance">
+              <span class="headertext">Distance</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMeterSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMeterSvim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtDistance">
+                <input
+                  type="text"
+                  name="MeterSvimTxt"
+                  id="MeterSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldDistance"
+                />
+                <span class="smallText">meter</span>
+              </div>
+            </div>
+          </div>
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Time(r)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addHourSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subHourSwim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="HourSvimTxt"
+                  id="HourSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <b>:</b>
+              </div>
+            </div>
+          </div>
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Minut(ter)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addMinutSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subMinutSvim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="MinutSvimTxt"
+                  id="MinutSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+                <span style="font-weight: bold">:</span>
+              </div>
+            </div>
+          </div>
+          <div class="inputTimes">
+            <div class="times">
+              <span class="headertext">Sekund(er)</span>
+            </div>
+            <div>
+              <div class="spinners">
+                <div class="plus">
+                  <img
+                    src="images/add.png"
+                    width="20"
+                    height="20"
+                    alt="add"
+                    onmouseover="this.src='images/addgreen.png'"
+                    onmouseout="this.src='images/add.png'"
+                    onclick="addSecondSvim();"
+                  />
+                </div>
+                <div class="minus">
+                  <img
+                    src="images/sub.png"
+                    width="20"
+                    height="20"
+                    alt="sub"
+                    onmouseover="this.src='images/subred.png'"
+                    onmouseout="this.src='images/sub.png'"
+                    onclick="subSecondSvim();"
+                  />
+                </div>
+              </div>
+              <div class="inputTxtTimes">
+                <input
+                  type="text"
+                  name="SecondSvimTxt"
+                  id="SecondSvimTxt"
+                  onkeypress="return isNumberKey(event)"
+                  class="inputFieldTimes"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="buttons">
+          <div class="divCalc">
+            <img
+              class="imgCalc"
+              src="images/calculate.png"
+              width="104"
+              height="40"
+              alt="beregn"
+              name="beregn"
+              id="beregn"
+              onmouseover="this.src='images/calculategreen.png'"
+              onmouseout="this.src='images/calculate.png'"
+              onClick="calculateExpectation();"
+            />
+          </div>
+          <div class="divReset">
+            <img
+              class="imgReset"
+              src="images/reset.png"
+              width="104"
+              height="40"
+              alt="nulstil"
+              name="nulstil"
+              id="nulstil"
+              onmouseover="this.src='images/resetgreen.png'"
+              onmouseout="this.src='images/reset.png'"
+              onClick="init();"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="resultText" class="resText"></div>
+    <div id="dvTable" class="resultTable"></div>
+  </body>
+</html>
